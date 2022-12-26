@@ -26,3 +26,10 @@ function operate(op, a, b) {
     }
 }
 
+// loop through each button and add an event listener
+const buttons = document.querySelectorAll("button");
+buttons.forEach(button => {
+    button.addEventListener('click', button => {
+        console.log(button.innerHTML);
+    });
+});
