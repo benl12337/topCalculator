@@ -37,6 +37,10 @@ button:hover {
     width: 210px;
 }
 
+.opButton {
+    background-color: orange;
+}
+
 #inputDisplay {
     font-size: 20px;
     text-align: right;
