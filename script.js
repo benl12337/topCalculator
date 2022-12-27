@@ -61,6 +61,18 @@ operatorButtons.forEach(opButton => {
         console.log(this.innerText);
         inputHistory += " " + this.innerText + " ";
         resultDisplay.innerText = inputHistory;
+        if (numberInputs == 1) {
+            inputNumber = parseInt(inputNumber);
+            inputNumberTwo = parseInt(inputNumberTwo);
+           let result = operate(this.innerText, inputNumber, inputNumberTwo);
+            console.log(result);
+            inputNumber = result;
+            calcDisplay.innerText = inputNumber;
+            inputNumberTwo = "";
+            numberInputs = 0;
+        }
+        console.log(numberInputs);
+        numberInputs += 1;
     });
 });
 
@@ -77,6 +89,7 @@ equalButton.addEventListener('click', function() {
     calcDisplay.innerText = result;
     resultDisplay.innerText = inputHistory;
     console.log(inputHistory);
+    numberInputs += 1;
 });
 
 // clear all the results and reset variables
@@ -90,4 +103,5 @@ clearButton.addEventListener('click', function() {
     calcDisplay.innerText = "";
     inputHistory = "";
     resultDisplay.innerText = "";
+    numberInputs = 0;
 });

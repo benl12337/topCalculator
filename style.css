@@ -27,8 +27,7 @@ button {
     color: white;
     font-weight: lighter;
     font-size: 40px;
-    transition: .5s ease;
-    background-color: darkgrey;
+    background-color: rgb(110, 110, 110);
 }
 
 button:hover {
@@ -37,6 +36,11 @@ button:hover {
 
 #zeroButton {
     width: 210px;
+    text-align: right;
+}
+
+.topRow {
+    background-color: rgb(146, 146, 146);
 }
 
 .opButton {
